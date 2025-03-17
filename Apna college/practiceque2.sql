@@ -30,3 +30,7 @@ insert into payment values ('110', 'bashar', 'credit card', 'usa');
 
 select * from payment
 order by coustomer_id;
+
+select mode, count(mode)
+from payment 
+group by mode;
