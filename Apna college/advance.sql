@@ -47,7 +47,7 @@ select * from student;
 
 delete from student 
 where rollno = 101;
-
+drop table dept;
 create table dept (
 id int primary key,
 dept_name varchar(20)
@@ -65,3 +65,30 @@ on delete cascade
 
 insert into dept values (101, 'Bangla'), (102, 'English'), (103, 'Math');
 insert into teacher values (1, 'Anil', 102), (2, 'Subir', 101), (3, 'Dhruv', 103), (4, 'Shanti', 103);
+
+select * from dept;
+select * from teacher;
+
+update dept
+set id = 104
+where id = 102;
+
+delete from teacher
+where id = 1;
+
+alter table student
+add column age int;
+
+alter table student
+add column age int default 19;
+alter table student
+drop column age;
+select * from student;
+
+alter table student
+rename to stu;
+
+select * from stu;
+
+alter table stu
+rename to student;
