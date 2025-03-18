@@ -26,3 +26,27 @@ where marks > 80;
 select namr, marks, city
 from student 
 where marks > 80 and city = 'Mumbai';
+
+select *
+from student 
+where marks between 80 and 90;
+
+select *
+from student 
+where city in('Mumbai', 'Delhi');
+
+select *
+from student 
+where marks > 80 or city = 'Delhi';
+
+select *
+from student 
+where marks not between 80 and 90;
+
+select *
+from student 
+where city not in('Mumbai', 'Delhi');
+
+select * from student 
+order by marks desc
+limit 1;
